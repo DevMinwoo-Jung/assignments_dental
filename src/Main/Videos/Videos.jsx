@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import useSWR from 'swr';
 import styled from 'styled-components'
+import Video from './Video';
   
   const VideosContainer = styled.div`
     width: 100%;
@@ -12,18 +13,25 @@ import styled from 'styled-components'
     grid: repeat(3);
   `
 
-const fetcher = async (url) => {
-  const result = await axios.get(url)
-  return result.data
-}
 const Videos = () => {
-  
+  const fetcher = async (url) => {
+    const result = await axios.get(url)
+    return result.data
+  }
   const { data, error } = useSWR('http://trusuite.truabutment.com/api/tada/list', fetcher)
 
-  console.log(data, error)
+  const viodeData = data?.data
+  console.log(viodeData[0])
+
+  // console.log(data.data.length)
   return (
     <VideosContainer>
-
+      
+      {/* {
+        viodeData.map((videoData) => 
+          <Video key={videoData.uid} videoData={videoData}/>
+        )
+      } */}
     </VideosContainer>
   ) 
 }
