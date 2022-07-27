@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios'
+import useSWR from 'swr'
 
   const SearchContainer = styled.div`
     width: 20rem;
@@ -9,6 +11,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
     border: 1px solid black;
     border-radius: 30px;
     display: flex;
+    margin-bottom: 3rem;
   `
 
   const Category = styled.div`
@@ -40,8 +43,14 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
     margin-right: 0.3rem;
     margin-top: 0.1rem;
   `
+const Search = (props) => {
+  const { setReslt } = props
+  const searchPara = useRef()
   
-const Search = () => {
+  useEffect(() => {
+    console.log(searchPara.current.value)
+    setReslt(searchPara.current.value)
+  }, [searchPara])
 
   return (
     <SearchContainer>
@@ -49,10 +58,10 @@ const Search = () => {
 
       </Category>
       <SearchText>
-        <input type="text" />
+        <input ref={searchPara} type="text"/>
       </SearchText>
-      <SearchIcon>
-        <FontAwesomeIcon icon={faSearch} />
+      <SearchIcon  onClick={setReslt}>
+        <FontAwesomeIcon icon={faSearch}/>
       </SearchIcon>
     </SearchContainer>
   )
