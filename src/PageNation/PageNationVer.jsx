@@ -21,7 +21,7 @@ const PageNationContainer = styled.div`
     border: none;
     padding: 0;
     font: inherit;
-    cursor: pointer;
+    cursor: pointer; 
     outline: inherit;
   }
 `
