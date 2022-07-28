@@ -32,7 +32,7 @@ const PageNationVer = (props) => {
 
   const goSetPage = (e) => {
     onSetPage(e)
-  }
+  } 
 
   return (
     <PageNationContainer>
