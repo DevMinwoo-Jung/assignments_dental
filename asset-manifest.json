@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.ad5a4255.js",
-    "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.ad5a4255.js.map": "/static/js/main.ad5a4255.js.map"
+    "main.css": "/www.minwooJungApple.com/static/css/main.e6c13ad2.css",
+    "main.js": "/www.minwooJungApple.com/static/js/main.4c6b49d7.js",
+    "index.html": "/www.minwooJungApple.com/index.html",
+    "main.e6c13ad2.css.map": "/www.minwooJungApple.com/static/css/main.e6c13ad2.css.map",
+    "main.4c6b49d7.js.map": "/www.minwooJungApple.com/static/js/main.4c6b49d7.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.ad5a4255.js"
+    "static/js/main.4c6b49d7.js"
   ]
 }
