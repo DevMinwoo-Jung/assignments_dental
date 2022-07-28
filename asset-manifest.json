@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DevMinwoo-Jung/assignments_dental/static/css/main.e6c13ad2.css",
+    "main.js": "/DevMinwoo-Jung/assignments_dental/static/js/main.7b9d588a.js",
+    "index.html": "/DevMinwoo-Jung/assignments_dental/index.html",
+    "main.e6c13ad2.css.map": "/DevMinwoo-Jung/assignments_dental/static/css/main.e6c13ad2.css.map",
+    "main.7b9d588a.js.map": "/DevMinwoo-Jung/assignments_dental/static/js/main.7b9d588a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.7b9d588a.js"
+  ]
+}
