@@ -2,11 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 
 const VideoContainer = styled.div`
+  position: relative;
   margin: 0 auto;
   display: block;
+  height: 240px;
   & p {
     font-size: 0.8rem;
     font-weight: bolder;
+    width: 320px;
+    line-break: normal;
   }
 `
 
@@ -24,6 +28,10 @@ const ImageDiv = styled.div`
     text-align: center;
     font-weight: bolder;
   }
+  & img {
+    width: 20rem;
+    height: 10rem;
+  }
 `
 
 const InformationDiv = styled.div`
@@ -35,6 +43,11 @@ const InformationDiv = styled.div`
     margin: auto 1rem;
     font-size: 0.8rem;
   }
+`
+
+const LengthSpan = styled.span`
+  position: absolute;
+  z-index: 100;
 `
 
 const CategoryBox = styled.div`
@@ -51,6 +64,7 @@ const CategoryBox = styled.div`
 const ViewsDiv = styled.div`
   right: 0;
   display: flex;
+  position: absolute;
 `
 
 const Video = (props) => {
@@ -60,14 +74,14 @@ const Video = (props) => {
     <VideoContainer>
       <ImageDiv>
         <img src={thumb} alt={title} />
-        <span>{length}</span>
+        <LengthSpan>{length}</LengthSpan>
       </ImageDiv>
       <p>{title}</p>
       <InformationDiv>
         <CategoryBox>{category}</CategoryBox>
         <span>{created_at_format}</span>
         <ViewsDiv>
-          <span>&#128065;{view}</span>
+          <span>&#128065;&nbsp;&nbsp;&nbsp;&nbsp;{view}</span>
         </ViewsDiv>
       </InformationDiv>
     </VideoContainer>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import styled from 'styled-components'
 import Video from './Video';
   
@@ -11,17 +12,54 @@ import Video from './Video';
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     justify-content: center;
+    z-index: 1;
+    & img {
+      z-index: 1;
+      position: relative;
+    }
+  `
+
+  const CannotFind = styled.div`
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 40rem;
   `
 const Videos = (props) => {
-  const { data } = props
+  const { result, change, offset, perPage, total } = props
+
+  if (total === 0) {
+    return (
+      <CannotFind>
+        <h2>검색결과를 찾을 수 없습니다.</h2>
+      </CannotFind>
+    )
+  }
+
+
 
   return (
     <VideosContainer>
       {
-        data && data.data.map((element) => 
-          <Video key={element.uid} video={element}/>
-        )
+        change === true 
+        ?
+        <>
+          {
+            result && result.slice(offset, offset + perPage).map(element => 
+              <Video key={element.uid} video={element}/>
+            )
+          }
+        </>
+        :
+        <>
+        {
+          result && result.map((element) => 
+            <Video key={element.uid} video={element}/>
+          )
+        }
+        </>
       }
+
     </VideosContainer>
   ) 
 }
