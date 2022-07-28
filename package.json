@@ -1,7 +1,7 @@
 {
   "name": "algorithm_korea",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://github.com/DevMinwoo-Jung/assignments_dental",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
