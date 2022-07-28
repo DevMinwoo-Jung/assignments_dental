@@ -1,7 +1,6 @@
 import React from 'react'
-import { useEffect } from 'react';
 import styled from 'styled-components'
-import Video from './Video';
+import Video from './Video'
   
   const VideosContainer = styled.div`
     width: 100%;

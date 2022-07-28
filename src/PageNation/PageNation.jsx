@@ -39,7 +39,7 @@ const PageNationContainer = styled.div`
 `
 
 const PageNation = (props) => {
-  const { page, perPage, total, onSearchByPage, change, onSetPageFromMain, setPage } = props
+  const { page, perPage, total, onSearchByPage, change, setPage } = props
   const pageNationNum = Math.ceil( total / perPage) === 0 ? 1 : Math.ceil( total / perPage)
   const pageLength = useMemo(() => [...'x'.repeat(pageNationNum).split('').keys()], [pageNationNum])
   const lastIndex = pageLength.length
